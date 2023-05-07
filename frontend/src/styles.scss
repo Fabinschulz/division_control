@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+
+.container-page {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 20px;
+  padding-top: 50px;
+}
+
+.container-page > .container__card-cadastro-divida, .container__card-parcelamento-divida {
+  margin: 18px;
+  width: 480px;
+
+  fieldset > input {
+    height: 50px;
+  }
+}
+
+.container-page > .container__card-parcelamento-divida {
+  form {
+    overflow-y: auto;
+    height: 660px;
+  }
+}
+
+.btn-block {
+  display: block;
+  width: 95%;
+}
+
+
+/* Make the error message red */
+.text-danger {
+  color: red;
+}
+
+
+.form__label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form__button {
+  width: 95%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form__button:hover {
+  background-color: #0069d9;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+

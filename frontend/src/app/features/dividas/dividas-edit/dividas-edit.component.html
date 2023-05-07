@@ -1,0 +1,185 @@
+<div class="container-page container py-3">
+  <div class="container__card-cadastro-divida">
+    <form class="form card p-5 rounded" [formGroup]="formGroup">
+      <h2 class="title">Cadastro de Divida</h2>
+
+
+      <fieldset class="my-2">
+        <label for="nomeDoDevedor" class="form__label">Nome do Devedor:</label>
+
+        <input [disabled]="true" type="text" id="nomeDoDevedor" class="form-control" placeholder="Insira o nome do Devedor"
+        formControlName="nomeDoDevedor" [ngClass]="{'is-invalid': formGroup.get('nomeDoDevedor')?.errors
+              && (formGroup.get('nomeDoDevedor')?.touched
+              || formGroup.get('nomeDoDevedor')?.dirty)}">
+
+
+
+
+        <span class="text-danger" *ngIf="formGroup.get('nomeDoDevedor')?.hasError('required')
+                    && (formGroup.get('nomeDoDevedor')?.touched
+                        || formGroup.get('nomeDoDevedor')?.dirty)">
+          {{campoObrigatorio}}
+        </span>
+
+      </fieldset>
+
+      <fieldset class="my-2">
+        <label for="numeroDoCpf" class="form__label">Número do CPF:</label>
+        <input type="text" id="numeroDoCpf" class="form-control" placeholder="000.000.000-00"
+          formControlName="cpfDoDevedor" [ngClass]="{'is-invalid': formGroup.get('cpfDoDevedor')?.errors
+            && (formGroup.get('cpfDoDevedor')?.touched
+            || formGroup.get('cpfDoDevedor')?.dirty)}
+            ">
+
+        <span class="text-danger" *ngIf="formGroup.get('cpfDoDevedor')?.hasError('required')
+                && (formGroup.get('cpfDoDevedor')?.touched
+                    || formGroup.get('cpfDoDevedor')?.dirty)">
+          {{campoObrigatorio}}
+        </span>
+      </fieldset>
+
+      <fieldset class="my-2">
+        <label for="numeroDoTitulo" class="form__label">Número do titulo:</label>
+        <input type="text" id="numeroDoTitulo" class="form-control" placeholder="Insira o número do titulo"
+          formControlName="numeroDoTitulo" [ngClass]="{'is-invalid': formGroup.get('numeroDoTitulo')?.errors
+            && (formGroup.get('numeroDoTitulo')?.touched
+            || formGroup.get('numeroDoTitulo')?.dirty)}
+            ">
+
+        <span class="text-danger" *ngIf="formGroup.get('numeroDoTitulo')?.hasError('required')
+                && (formGroup.get('numeroDoTitulo')?.touched
+                    || formGroup.get('numeroDoTitulo')?.dirty)">
+          {{campoObrigatorio}}
+        </span>
+      </fieldset>
+
+      <fieldset class="my-2">
+        <label for="multa" class="form__label">Porcentagem da Multa:</label>
+        <input type="number" id="multa" class="form-control" placeholder="0%" formControlName="multa" [ngClass]="{'is-invalid': formGroup.get('multa')?.errors
+            && (formGroup.get('multa')?.touched
+            || formGroup.get('multa')?.dirty)}
+            ">
+
+        <span class="text-danger" *ngIf="formGroup.get('multa')?.hasError('required')
+                          && (formGroup.get('multa')?.touched
+                              || formGroup.get('multa')?.dirty)">
+
+          {{campoObrigatorio}}
+        </span>
+      </fieldset>
+
+      <fieldset class="my-2">
+        <label for="valor" class="form__label">Juros:</label>
+        <input type="number" id="juros" class="form-control" placeholder="0%" formControlName="juros" [ngClass]="{'is-invalid': formGroup.get('juros')?.errors
+            && (formGroup.get('juros')?.touched
+            || formGroup.get('juros')?.dirty)}
+            ">
+
+        <span class="text-danger" *ngIf="formGroup.get('juros')?.hasError('required')
+                && (formGroup.get('juros')?.touched
+                    || formGroup.get('juros')?.dirty)">
+          {{campoObrigatorio}}
+        </span>
+      </fieldset>
+
+        <ng-container *ngIf="!viewButton">
+          <fieldset class="my-2">
+            <label for="diasEmAtraso" class="form__label">Dias Em Atraso:</label>
+            <input type="number" id="diasEmAtraso" class="form-control" formControlName="diasEmAtraso">
+          </fieldset>
+        </ng-container>
+
+
+    </form>
+  </div>
+
+  <div class="container__card-parcelamento-divida">
+
+    <form class="form card p-5">
+      <h2 class="title">Parcelamento da Dívida</h2>
+
+      <div *ngFor="let item of parcelasForms; let i=index" [formGroup]="item">
+        <div class="card">
+          <div class="card-body">
+
+            <fieldset class="my-2">
+              <label for="numeroDeParcelas" class="form__label">Número da Parcela:</label>
+              <input type="text" id="numeroDeParcelas" class="form-control" placeholder="Insira o número de parcelas"
+                formControlName="numeroDaParcela" [ngClass]="{'is-invalid': item.get('numeroDaParcela')?.errors
+                && (item.get('numeroDaParcela')?.touched
+                || item.get('numeroDaParcela')?.dirty)}
+                ">
+
+                <span class="text-danger" *ngIf="item.get('numeroDaParcela')?.hasError('required')
+                        && (item.get('numeroDaParcela')?.touched
+                            || item.get('numeroDaParcela')?.dirty)">
+                  {{campoObrigatorio}}
+                </span>
+             </fieldset>
+
+              <fieldset class="my-2">
+              <label for="valorParcela" class="form__label">Valor da Parcela:</label>
+              <input type="number" id="valorParcela" class="form-control" placeholder="Insira o valor da parcela"
+                formControlName="valorDaParcela" [ngClass]="{'is-invalid': item.get('valorDaParcela')?.errors
+                && (item.get('valorDaParcela')?.touched
+                || item.get('valorDaParcela')?.dirty)}
+                ">
+
+                <span class="text-danger" *ngIf="item.get('valorDaParcela')?.hasError('required')
+                        && (item.get('valorDaParcela')?.touched
+                            || item.get('valorDaParcela')?.dirty)">
+                  {{campoObrigatorio}}
+                </span>
+              </fieldset>
+
+              <fieldset class="my-2">
+              <label for="dataDeVencimento" class="form__label">Data de Vencimento:</label>
+              <input type="date" id="dataDeVencimento" class="form-control" placeholder="Insira a data de vencimento"
+                formControlName="dataDeVencimento" [ngClass]="{'is-invalid': item.get('dataDeVencimento')?.errors
+                && (item.get('dataDeVencimento')?.touched
+                || item.get('dataDeVencimento')?.dirty)}
+                ">
+
+                <span class="text-danger" *ngIf="item.get('dataDeVencimento')?.hasError('required')
+                        && (item.get('dataDeVencimento')?.touched
+                            || item.get('dataDeVencimento')?.dirty)">
+                  {{campoObrigatorio}}
+                </span>
+              </fieldset>
+
+              <ng-container *ngIf="!viewButton">
+                <fieldset class="my-2">
+                  <label for="diasEmAtraso" class="form__label">Dias Em Atraso:</label>
+                  <input type="number" id="diasEmAtraso" class="form-control" formControlName="diasEmAtraso">
+                </fieldset>
+              </ng-container>
+          </div>
+        </div>
+        <br>
+      </div>
+
+
+          <ng-container *ngIf="viewButton">
+            <div class="col-lg-12">
+              <button type="button" class="btn btn-outline-primary btn-block" (click)="addDivida()">
+                <i class="fas fa-plus"></i> Adicionar parcela
+              </button>
+              <button type="button" class="btn btn-danger btn-block" (click)="removeParcela()" *ngIf="parcelasForms.length > 0">
+                <i class="fas fa-minus"></i> Remover parcela
+              </button>
+            </div>
+          </ng-container>
+    </form>
+  </div>
+
+
+
+    <ng-container *ngIf="viewButton">
+      <div class="col-lg-12" *ngIf="viewButton">
+        <button class="form__button" (click)="salvarDivida()">Salvar</button>
+      </div>
+    </ng-container>
+
+
+ </div>
+

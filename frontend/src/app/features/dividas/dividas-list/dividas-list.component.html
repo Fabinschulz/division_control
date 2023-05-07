@@ -1,0 +1,51 @@
+<div class=" py-5">
+  <div class="d-flex justify-content-between mb-3">
+    <h2>Lista de Dívidas</h2>
+    <div class="d-flex">
+      <button class="btn btn-primary" (click)="criar()">Novo Registro</button>
+    </div>
+  </div>
+
+  <table class="table table-sm border-radius">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Numero/Titulo</th>
+        <th scope="col">Nome/Devedor</th>
+        <th scope="col">Cpf/Devedor</th>
+        <th scope="col">Juros</th>
+        <th scope="col">Multa</th>
+        <th scope="col">Valor Original</th>
+        <th scope="col">Dias/Atraso</th>
+        <th scope="col">Valor Atualizado</th>
+        <th scope="col">Qtd de Parcelas</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let divida of dividas; let i = index">
+        <th scope="row">{{ i + 1}}</th>
+          <td>{{ divida.numeroDoTitulo }} </td>
+          <td>{{ divida.nomeDoDevedor }} </td>
+          <td>{{ divida.cpfDoDevedor }}</td>
+          <td>{{ divida.juros }}%</td>
+          <td>{{ divida.multa }}%</td>
+          <td>{{ divida.valorOriginal }}</td>
+          <td>{{ divida.diasEmAtraso }}</td>
+          <td>{{ divida.valorAtualizado }}</td>
+          <td>{{ divida.quantidadeDeParcelas }}</td>
+          <td class="d-flex">
+              <a class="btn m-1 btn-outline-info" (click)="editar(divida.id)">
+                Editar
+              </a>
+              <a class="btn m-1 btn-outline-warning" (click)="visualizar(divida.id)">
+                Visualizar
+              </a>
+              <a class="btn m-1 btn-outline-danger" (click)="remover(divida.id)">
+                Deletar
+              </a>
+          </td>
+        </tr>
+  </tbody>
+  </table>
+</div>

@@ -1,0 +1,37 @@
+.label-container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 88%;
+  max-width: 88%;
+  label {
+    display: flex;
+  }
+  span {
+    display: flex;
+  }
+}
+
+.p-inputtext {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  min-width: 90%;
+  max-width: 90%;
+}
+
+@media (min-width: 992px) and (max-width: 1331px) {
+  .p-inputtext {
+    font-size: 0.8125rem;
+    font-weight: 400;
+    min-width: 88%;
+    max-width: 88%;
+  }
+}
+
+.page-filter-bar ::ng-deep .ui-dropdown .ui-dropdown-label {
+  text-overflow: ellipsis;
+  padding-right: 2em !important;
+}
+
+#button {
+  height: 45px;
+}

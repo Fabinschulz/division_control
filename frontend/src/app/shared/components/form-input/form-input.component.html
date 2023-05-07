@@ -1,0 +1,33 @@
+<div [formGroup]="parentFormGroup" class="form">
+  <label for="{{name}}" class="form__label">{{showName}}</label>
+
+  <div [ngSwitch]="switchCase">
+    <input *ngSwitchCase="'text'" [id]="name" [formControlName]="name" [type]="inputType"
+           class="form__input" [placeholder]="placeholder"
+           (blur)="handleOnBlur($event)">
+
+    <!-- <input *ngSwitchCase="'mask'" [id]="name" [formControlName]="name" [type]="inputType"
+           class="form-input-textbox" [placeholder]="placeholder" mask="{{hasMask}}"
+           (blur)="handleOnBlur($event)"> -->
+
+    <input *ngSwitchCase="'currency'" [id]="name" [formControlName]="name" [type]="inputType"
+           class="form__input" [placeholder]="placeholder" mask="currency"
+           (blur)="handleOnBlur($event)">
+  </div>
+
+  <div *ngIf="hasErrors" class="form__input-error">
+    <span *ngIf="hasRequiredError">This field is required. </span>
+    <span *ngIf="hasMinimumLengthError">Minimum length is {{fieldControl.errors?.['minlength'].requiredLength}}. </span>
+    <span *ngIf="hasMaximumLengthError">Maximum length is {{fieldControl.errors?.['maxlength'].requiredLength}}. </span>
+    <span *ngIf="hasEmailError">Please enter a valid email address. </span>
+    <span *ngIf="hasMinimumError">Minimum value is {{minimumValue}}. </span>
+    <span *ngIf="hasMaximumError">Maximum value is {{maximumValue}}. </span>
+    <span *ngIf="hasPercentageError">Please enter a percentage between 0 and 100. </span>
+  </div>
+
+  <div *ngIf="helpText" class="form__input-help-text">{{helpText}}</div>
+
+  <button *ngIf="buttonText" type="button" class="form__button" (click)="customActionsEmitter.emit()">
+    {{buttonText}}
+  </button>
+</div>
