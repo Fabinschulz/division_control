@@ -1,0 +1,44 @@
+.section-hero {
+  background-image: url("./crontole-de-dividas.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+  .hero-content {
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    .hero-title {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff5c5c;
+      color: #fff;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ff3c3c;
+      }
+    }
+  }
+}

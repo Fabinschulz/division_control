@@ -1,11 +1,14 @@
-<header class="bg-dark shadow">
+<header class="bg-info shadow">
   <nav class="container navbar navbar-expand-lg navbar-dark">
-    <a class="logo" href="#">Controle de Divida</a>
+    <a class="logo" href="/">Controle de Divida</a>
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li *ngFor="let menuItem of headerMenus" class="nav-item">
           <a class="nav-link" href="{{ menuItem.link }}">{{ menuItem.label }}</a>
+        </li>
+        <li *ngFor="let menuItem of headerMenus" class="nav-item">
+          <a class="nav-link" href="/features/dividas/dividas-create">Simular</a>
         </li>
       </ul>
     </div>

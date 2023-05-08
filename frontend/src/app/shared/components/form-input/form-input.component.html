@@ -6,10 +6,6 @@
            class="form__input" [placeholder]="placeholder"
            (blur)="handleOnBlur($event)">
 
-    <!-- <input *ngSwitchCase="'mask'" [id]="name" [formControlName]="name" [type]="inputType"
-           class="form-input-textbox" [placeholder]="placeholder" mask="{{hasMask}}"
-           (blur)="handleOnBlur($event)"> -->
-
     <input *ngSwitchCase="'currency'" [id]="name" [formControlName]="name" [type]="inputType"
            class="form__input" [placeholder]="placeholder" mask="currency"
            (blur)="handleOnBlur($event)">

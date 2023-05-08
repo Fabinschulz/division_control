@@ -16,6 +16,10 @@ header {
   text-decoration: none;
   display: flex;
   align-items: center;
+
+  &:hover {
+    color: #000000;
+  }
 }
 
 
@@ -28,4 +32,9 @@ header {
   padding-right: 0;
   height: 39px;
   padding-left: 0;
+  color: #FFFFFF;
+
+  &:hover {
+    color: #000000;
+  }
 }
