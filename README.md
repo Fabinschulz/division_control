@@ -47,3 +47,7 @@ Se você deseja contribuir para o projeto, siga as diretrizes abaixo:
 -   [Nome do desenvolvedor](https://github.com/nome-do-desenvolvedor)
 -   [Nome do desenvolvedor](https://github.com/nome-do-desenvolvedor)
 -   [Nome do desenvolvedor](https://github.com/nome-do-desenvolvedor)
+
+## Interface
+
+- [Controle de Dividas](/frontend/src/assets/divisioncontrol.gif)
