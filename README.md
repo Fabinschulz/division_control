@@ -45,8 +45,8 @@ Se você deseja contribuir para o projeto, siga as diretrizes abaixo:
 -   [Fabio Lima](https://github.com/Fabinschulz)
 -   [Maria Eduarda](https://github.com/lymaduds)
 -   [Ibson Ramos](https://github.com/nome-do-desenvolvedor)
--   [Nome do desenvolvedor](https://github.com/nome-do-desenvolvedor)
--   [Nome do desenvolvedor](https://github.com/nome-do-desenvolvedor)
+-   [Nedge Alves](https://github.com/nome-do-desenvolvedor)
+-   [João Alberto](https://github.com/nome-do-desenvolvedor)
 
 ## Interface
 
