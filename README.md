@@ -20,6 +20,12 @@ O objetivo principal deste projeto é fornecer uma plataforma simples e poderosa
 -   Angular: Utilizamos o framework Angular para a construção do front-end, aproveitando seu poderoso sistema de componentes e facilidade de integração com o back-end.
 -   SCSS: Usamos o SCSS (Sassy CSS) como pré-processador de CSS para facilitar a estilização e manutenção da interface, permitindo a criação de estilos reutilizáveis e mais organizados.
 
+### Banco de dados
+
+- Baixe SSMS - Microsoft SQL server management e SQL Express.(https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
+- Assista o video (https://www.youtube.com/watch?v=LxtLqS-9KYo&t=820s) para ajuda-lo na instalação. 
+
+
 ## Instruções de Instalação e Execução
 
 Para executar o Controle de Dívidas em seu ambiente local, siga as etapas abaixo:
