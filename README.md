@@ -24,7 +24,13 @@ O objetivo principal deste projeto é fornecer uma plataforma simples e poderosa
 
 - Baixe SSMS - Microsoft SQL server management e SQL Express.(https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
 - Assista o video (https://www.youtube.com/watch?v=LxtLqS-9KYo&t=820s) para ajuda-lo na instalação. 
+- Ou instale https://dbeaver.io/download/ (Recomendado).
 
+
+### Recomendações
+
+- Use o Visual Studio da Microsoft para melhor performance.
+- Execute o comando: update-database -context SystemContext no gerenciador de pacote. OBS: O Projeto padrão deve estar apontado para ControleDeDividas.infra.
 
 ## Instruções de Instalação e Execução
 

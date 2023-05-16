@@ -24,7 +24,7 @@ namespace ControleDeDividas.Api.Controllers
 
         [HttpPost("registrar")]
         public async Task<IActionResult> Registrar([FromBody] RegistrarDividaDto viewModel)
-        {
+        { 
             var commando = _mapper.Map<RegistrarDividaCommand>(viewModel);
 
             return CustomResponse(await _mediator.EnviarComando(commando));
