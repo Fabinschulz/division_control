@@ -58,7 +58,7 @@ Se você deseja contribuir para o projeto, siga as diretrizes abaixo:
 -   [Maria Eduarda](https://github.com/lymaduds)
 -   [Ibson Ramos](https://github.com/ibsonramos)
 -   [Nedge Alves](https://github.com/nome-do-desenvolvedor)
--   [Jackeline Pereira](https://github.com/nome-do-desenvolvedor)
+-   [João Alberto](https://github.com/nome-do-desenvolvedor)
 
 ## Interface
 
