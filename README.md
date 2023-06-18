@@ -52,14 +52,6 @@ Se você deseja contribuir para o projeto, siga as diretrizes abaixo:
 4.  Envie as alterações para o repositório remoto: `git push origin nome-da-sua-branch`.
 5.  Abra um pull request para revisão do seu código.
 
-## Equipe
-
--   [Fabio Lima](https://github.com/Fabinschulz)
--   [Maria Eduarda](https://github.com/lymaduds)
--   [Ibson Ramos](https://github.com/ibsonramos)
--   [Nedge Alves](https://github.com/nome-do-desenvolvedor)
--   [João Alberto](https://github.com/nome-do-desenvolvedor)
-
 ## Interface
 
 - [Controle de Dividas](/frontend/src/assets/divisioncontrol.gif)
